@@ -8,12 +8,12 @@ java version "1.8.0_121"
 Compile:
 ========
 (from src folder)
-javac -classpath .;lib/log4j-api-2.1.jar;lib/log4j-core-2.1.jar com\example\Log4jVul.java
+javac -classpath .;..\lib\log4j-api-2.1.jar;..\lib\log4j-core-2.1.jar com\example\Log4jVul.java
 
 Execute\Run:
 =============
 (from src folder)
-java -classpath .;lib/log4j-api-2.1.jar;lib/log4j-core-2.1.jar com.example.Log4jVul Bhanu
+java -classpath .;..\lib\log4j-api-2.1.jar;..\lib\log4j-core-2.1.jar com.example.Log4jVul Bhanu
 
 Output:
 ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
@@ -22,7 +22,7 @@ ERROR StatusLogger No log4j2 configuration file found. Using default configurati
 Vulnerability show:
 ===================
 (from src folder)
-java -classpath .;lib/log4j-api-2.1.jar;lib/log4j-core-2.1.jar com.example.Log4jVul ${java:version}
+java -classpath .;..\lib\log4j-api-2.1.jar;..\lib\log4j-core-2.1.jar com.example.Log4jVul ${java:version}
 
 Output:
 ERROR StatusLogger No log4j2 configuration file found. Using default configuration: logging only errors to the console.
@@ -36,12 +36,12 @@ Fixing with version Log4j 2.16.0
 Compile:
 ========
 (from src folder)
-javac -classpath .;lib/log4j-api-2.16.0.jar;lib/log4j-core-2.16.0.jar com\example\Log4jVul.java
+javac -classpath .;..\lib\log4j-api-2.16.0.jar;..\lib\log4j-core-2.16.0.jar com\example\Log4jVul.java
 
 Execute\Run:
 ============
 (from src folder)
-java -classpath .;lib/log4j-api-2.16.0.jar;lib/log4j-core-2.16.0.jar com.example.Log4jVul ${java:version}
+java -classpath .;..\lib\log4j-api-2.16.0.jar;..\lib\log4j-core-2.16.0.jar com.example.Log4jVul ${java:version}
 
 Output:
 11:42:48.815 [main] ERROR com.example.Log4jVul - ** Username: ${java:version}**
